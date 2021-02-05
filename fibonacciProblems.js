@@ -21,7 +21,7 @@ function fibonacci(n) {
 
 /*
 Commentary: This is the most generic solution using recursion. The code is short and clean but it has an exponential time complexity O(2n).
-It's extremely inefficient and it takes a lot of time to calculate a Fibonacci number higher than 40.
+It's extremely inefficient and takes a lot of time to calculate a Fibonacci number higher than 40.
 */
 
 // *******************************************************
