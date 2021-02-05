@@ -20,7 +20,8 @@ function fibonacci(n) {
 
 
 /*
-Commentary: This is the most generic solution using recursion. The code is short and clean but it has an exponential time complexity O(2n). It's extremely inefficient and it takes a lot of time to calculate a Fibonacci number higher than 40.
+Commentary: This is the most generic solution using recursion. The code is short and clean but it has an exponential time complexity O(2n).
+It's extremely inefficient and it takes a lot of time to calculate a Fibonacci number higher than 40.
 */
 
 // *******************************************************
@@ -50,7 +51,8 @@ function completeFibonacci(n) {
   };
 
 /*
-Commentary: This code doesnt use recursion and instead simply uses a loop to calculate the Fibonacci numbers up to N and stores them in an array. It has a linear time complexity O(n), much more efficient than the normal solution with recursion.
+Commentary: This code doesnt use recursion and instead simply uses a loop to calculate the Fibonacci numbers up to N and stores them in an array.
+It has a linear time complexity O(n), much more efficient than the solution using recursion.
 */
 
 // *******************************************************
@@ -61,7 +63,8 @@ Commentary: This code doesnt use recursion and instead simply uses a loop to cal
 The performance version of the Fibonacci Problem
 ______________________________
 
-Description: Like the classic version of the problem, you have to return the N-th fibonacci number. But this time, the numbers are much higher and there are many tests that ensure that code with an exponential time complexity will always fail.
+Description: Like the classic version of the problem, you have to return the N-th fibonacci number. But this time, the
+numbers are much higher and there are many tests that ensure that code with an exponential time complexity will always fail.
 
 Input: A number N.
 
@@ -79,7 +82,10 @@ function memoizedFibonacci(n, memo = {}) {
 }
 
 /*
-Commentary: Uses the previous recursive solution with an added Memo Object that stores all the results of the calculations. This reduces the time complexity from exponential O(2n) to a linear O(n). This is a Dynamic Programming solution. The key is to understand how many calculations you can avoid doing again if you store the results and consult them whenever needed. Javascript's dictionary-like objects are ideal for this (it would be inefficient to use an array, as you would have to traverse it all to check if you already stored a value).
+Commentary: Uses the previous recursive solution with an added Memo Object that stores all the results of the calculations.
+This reduces the time complexity from exponential O(2n) to a linear O(n). This is a Dynamic Programming solution.
+The key is to understand how many calculations you can avoid doing again if you store the results and consult them whenever needed.
+Javascript's dictionary-like objects are ideal for this (it would be inefficient to use an array, as you would have to traverse it to check if you already stored a value).
 */
 
 // *******************************************************
@@ -90,7 +96,8 @@ Commentary: Uses the previous recursive solution with an added Memo Object that 
 Tribonacci sequence with custom Signature
 ______________________________
 
-Description: The Tribonacci sequence is made adding the last 3 numbers of the sequence to generate the next. This problem also includes a custom initial signature of three numbers for the sequence.
+Description: The Tribonacci sequence is made adding the last 3 numbers of the sequence to generate the next.
+This problem also includes a custom initial signature of three numbers for the sequence.
 
 Input: An array with a Signature initial sequence of three numbers and a number N.
 
@@ -109,4 +116,6 @@ function tribonacci(signature,n){
 /*
 Commentary: A simple problem included to show how you can adapt to work with sequences that don't necessarily begin with 0 and 1.
 */
+
+
 
