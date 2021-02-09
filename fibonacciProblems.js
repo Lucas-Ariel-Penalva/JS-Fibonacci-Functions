@@ -73,17 +73,15 @@ Output: The N-th number of the fibonacci sequence.
 */ 
 
 function memoizedFibonacci(n, memo = {}) {
-    if (n in memo)
-        return memo[n];
-    if (n == 0 || n == 1)
-        return n;
+    if (n in memo) return memo[n];
+    if (n == 0 || n == 1) return n;
     memo[n] = memoizedFibonacci(n - 1, memo) + memoizedFibonacci(n - 2, memo);
     return memo[n];
-}
+};
 
 /*
 Commentary: Uses the previous recursive solution with an added Memo Object that stores all the results of the calculations.
-This reduces the time complexity from exponential O(2n) to a linear O(n). This is a Dynamic Programming solution.
+This reduces the time complexity from exponential O(2^n) to a linear O(n). This is a Dynamic Programming solution.
 The key is to understand how many calculations you can avoid doing again if you store the results and consult them whenever needed.
 Javascript's dictionary-like objects are ideal for this (it would be inefficient to use an array, as you would have to traverse it to check if you already stored a value).
 */
